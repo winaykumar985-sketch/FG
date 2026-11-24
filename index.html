@@ -886,12 +886,15 @@
        3. FIREBASE SETUP & GLOBAL STATE
     ========================================================================= */
     const appId = typeof __app_id !== 'undefined' ? __app_id : 'playhub-arena-secure';
-    let firebaseConfig = null;
-    try {
-      if (typeof __firebase_config !== 'undefined' && __firebase_config) {
-        firebaseConfig = typeof __firebase_config === 'string' ? JSON.parse(__firebase_config) : __firebase_config;
-      }
-    } catch (e) { firebaseConfig = null; }
+   const firebaseConfig = {
+      apiKey: "AIzaSyD6-epy2bm3FgyNc0G4xUEe09iLHw8X5NA",
+      authDomain: "fgames-88bf5.firebaseapp.com",
+      projectId: "fgames-88bf5",
+      storageBucket: "fgames-88bf5.firebasestorage.app",
+      messagingSenderId: "298099923790",
+      appId: "1:298099923790:web:4770c5539a1ca7f8835c1f",
+      measurementId: "G-LJ5SRG3S2P"
+    };
 
     let app = null, auth = null, db = null;
     if (firebaseConfig) {
